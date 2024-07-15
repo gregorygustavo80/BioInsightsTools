@@ -5,7 +5,7 @@ from Bio.Align import substitution_matrices
 from Bio.SeqUtils import gc_fraction 
 
 st.set_page_config(layout="wide")
-base="dark"
+
 
 # Título
 st.markdown(
