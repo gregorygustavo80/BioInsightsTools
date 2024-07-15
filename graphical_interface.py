@@ -4,7 +4,6 @@ from Bio import pairwise2
 from Bio.Align import substitution_matrices
 from Bio.SeqUtils import gc_fraction 
 
-
 st.set_page_config(layout="wide")
 base="dark"
 
@@ -182,24 +181,27 @@ elif option == "Converter DNA para Proteína":
 
         seq_ajustada = ajustar_sequencia(sequence)
         dnaM = Seq(seq_ajustada)
-        DNAc = dnaM.complement()
-        RNAm = DNAc.transcribe()
+        RNAm = dnaM.transcribe()
         prot = RNAm.translate()
 
-        st.write(f'Proteína: {prot}')
+        st.text(f'Gene: {seq}')
+        st.text(f'RNAm:{RNAm}')
+        st.text(f'Proteína: {prot}')
+
         st.text(' * = códon de parada')
-        return prot
-    
+        return seq, RNAm, prot
+        
+
     seq = st.text_area('Insira a sequência de bases: ').strip().upper()
 
     if st.button('Converter DNA para Proteína'):
         with st.spinner('Carregando'):
-            prot = dna_prot(seq)
+            info = dna_prot(seq)
             st.success('Operação concluída com sucesso!')
     
             st.download_button(
                 label="Baixar Proteína",
-                data=str(prot),
+                data=(f'Sequência: {info[0]}\nRNAm: {info[1]}\nProteína: {info[2]}'),
                 file_name="proteina.txt",
                 mime="text/plain"
             )
