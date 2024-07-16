@@ -5,10 +5,21 @@ BioInsightsTools é uma aplicação web desenvolvida com Streamlit, focada em of
 ## Funcionalidades
 
 1. **Alinhamento BLOSUM62**: Realiza alinhamentos globais e locais de sequências de proteínas usando a matriz de substituição BLOSUM62.
-2. **Alinhamento PAM250**: Realiza alinhamentos globais e locais de sequências de proteínas usando a matriz de substituição PAM250.
-3. **Alinhamento de DNA**: Realiza alinhamentos globais e locais de sequências de DNA.
-4. **Converter DNA para Proteína**: Transcreve e traduz sequências de DNA em proteínas.
-5. **Primer Check**: Verifica a qualidade de uma sequência de primer, calculando seu tamanho, proporção de GC, proporção de AT, e temperatura de melting (Tm).
+![image](https://github.com/user-attachments/assets/227bb18d-ea12-4b2a-872d-669e53f21eee)
+
+3. **Alinhamento PAM250**: Realiza alinhamentos globais e locais de sequências de proteínas usando a matriz de substituição PAM250.
+![image](https://github.com/user-attachments/assets/e68cd12f-17bf-459c-a97d-80ae6a3324bd)
+
+4. **Alinhamento de DNA**: Realiza alinhamentos globais e locais de sequências de DNA.
+![image](https://github.com/user-attachments/assets/41ec4b7e-2402-41f1-8127-8d49d2f5c598)
+
+5. **Converter DNA para Proteína**: Transcreve e traduz sequências de DNA em proteínas.
+![image](https://github.com/user-attachments/assets/6c74b1f9-8630-480e-b83c-35d79702aa03)
+
+6. **Primer Check**: Verifica a qualidade de uma sequência de primer, calculando seu tamanho, proporção de GC, proporção de AT, e temperatura de melting (Tm).
+![image](https://github.com/user-attachments/assets/b6f3b68a-9585-4b60-b857-16d0e5554d21)
+
+
 
 ## Como Usar
 
