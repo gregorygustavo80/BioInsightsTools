@@ -73,6 +73,7 @@ BioInsightsTools é uma aplicação web desenvolvida com Streamlit, focada em of
 1. Selecione "Converter DNA para Proteína" no menu lateral.
 2. Insira a sequência de DNA.
 3. Clique em "Converter DNA para Proteína" para ver a sequência de proteína resultante.
+![alt text](image.png)
 
 ## Contribuição
 
