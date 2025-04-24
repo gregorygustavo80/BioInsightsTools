@@ -3,33 +3,34 @@ from Bio.Seq import Seq
 from Bio import pairwise2
 from Bio.Align import substitution_matrices
 from Bio.SeqUtils import gc_fraction 
+from PIL import Image
+from io import BytesIO
+import base64
 
 st.set_page_config(layout="wide")
 base="dark"
 
-# Título
-st.markdown(
-    """
-    <center>
-        <h1>BioInsightsTools</h1>
-    </center>
-    """,
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    """
-    <center>
-        <h4>Bioinformatics Solutions</h4>
-    </center>
-    """,
-    unsafe_allow_html=True
-)
-
 st.sidebar.title("Opções")
+
 option = st.sidebar.selectbox("Escolha uma opção", ["Selecione...", "Alinhamento BLOSUM62", "Alinhamento PAM250", "Alinhamento de DNA", "Converter DNA para Proteína","Primer Check"])
 
-if option == "Alinhamento BLOSUM62":
+if option == "Selecione...":
+   imagem = Image.open('imagem.png')
+   buffer = BytesIO()
+   imagem.save(buffer, format="PNG")  
+   img_str = base64.b64encode(buffer.getvalue()).decode("utf-8")
+   
+   st.markdown(
+
+        f"""
+        <div style="text-align: center;">
+        <img src="data:image/png;base64,{img_str}" width="450"/>
+        </div>
+        """,
+        unsafe_allow_html=True
+        )
+
+if option == "Alinhamento BLOSUM62":# Título
 
     st.header(" Matriz BLOSUM62")
 
